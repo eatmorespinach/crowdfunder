@@ -24,9 +24,27 @@
       <% end %>
          <%= link_to "Projects", projects_path %>
         </li>
+
+        <li>
+          <% if current_user %>
+            <%= link_to "Logout", "#", :method => :delete %>
+          <% else %>
+            <%= link_to "Sign Up", new_user_path %>
+          <% end %>
+        </li>
     </ul>
   </div>
 
+  <% if flash[:notice] %>
+    <div class="alert alert-block">
+      <p id='notice'><%= flash[:notice]%></p>   
+    </div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="alert alert-block">
+      <p id='alert'><%= flash[:alert] %></p>
+    </div>
+  <% end %>
   
 <%= yield %>
 
