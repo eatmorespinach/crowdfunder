@@ -5,6 +5,11 @@ require 'rails/test_help'
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
+  include Capybara::DSL
+  # Crowdfunder is to be changed to the name of your app
+  Capybara.app = Crowdfunder::Application
+
+
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
