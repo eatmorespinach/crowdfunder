@@ -36,13 +36,13 @@
   </div>
 
   <% if flash[:notice] %>
-    <div class="alert alert-block">
-      <p id='notice'><%= flash[:notice]%></p>   
+    <div class="notice">
+      <%= flash[:notice]%>  
     </div>
   <% end %>
   <% if flash[:alert] %>
-    <div class="alert alert-block">
-      <p id='alert'><%= flash[:alert] %></p>
+    <div class="alert">
+      <%= flash[:alert] %>
     </div>
   <% end %>
   
