@@ -4,7 +4,22 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
+
+group :tools do
+  gem 'guard-test' # automatically runs our tests whenever there have been changes made to them
+end
+
+group :development do
+  gem 'better_errors' # makes the errors we see in the browser more descriptive
+  gem 'pry-rails'
+end
+
+group :test do 
+  gem "factory_girl_rails" 
+  gem "capybara"
+end
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
