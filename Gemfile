@@ -9,7 +9,7 @@ gem 'sorcery'
 
 
 group :tools do
-  gem 'guard-test' # automatically runs our tests whenever there have been changes made to them
+  gem 'guard-minitest' # automatically runs our tests whenever there have been changes made to them
 end
 
 group :development do
