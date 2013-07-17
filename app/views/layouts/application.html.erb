@@ -17,7 +17,7 @@
       <% end %>
           <%= link_to "Home", root_path %>
         </li>
-      <% if request.fullpath == projects_path %>
+      <% if request.fullpath == projects_path || request.fullpath == project_path(@project) %>
         <li class="active">
       <% else %>
         <li>       
