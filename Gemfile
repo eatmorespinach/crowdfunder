@@ -7,6 +7,11 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'sorcery'
 
+group :assets do
+	gem 'bootstrap-sass', '~> 2.2.2.0'
+end
+
+
 
 
 group :tools do

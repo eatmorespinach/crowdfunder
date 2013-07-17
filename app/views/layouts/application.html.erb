@@ -12,22 +12,18 @@
     <ul>
       <% if request.fullpath == root_path %>
         <li class="active">
-          <%= link_to "Home", root_path %>
-        </li>
       <% else %>
-        <li>
+        <li>  
+      <% end %>
           <%= link_to "Home", root_path %>
         </li>
-      <% end %>
       <% if request.fullpath == projects_path %>
         <li class="active">
-          <%= link_to "Projects", projects_path %>
-        </li>
       <% else %>
-        <li>
-          <%= link_to "Projects", projects_path %>
-        </li>
+        <li>       
       <% end %>
+         <%= link_to "Projects", projects_path %>
+        </li>
     </ul>
   </div>
 
