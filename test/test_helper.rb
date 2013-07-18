@@ -3,7 +3,9 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
 class ActiveSupport::TestCase
-
+  teardown do 
+    DatabaseCleaner.clean
+  end
 end
 
 
@@ -36,7 +38,7 @@ class ActionDispatch::IntegrationTest
     fill_in "email", with: user.email
     fill_in "password", with: pass
     click_button "Login"
-
+    user
     # No asserts because testing is not done inside of a helper method
   end
 end
