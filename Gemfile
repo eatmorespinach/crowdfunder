@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'sorcery'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 group :assets do
 	gem 'bootstrap-sass', '~> 2.2.2.0'
