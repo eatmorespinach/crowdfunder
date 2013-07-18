@@ -28,7 +28,6 @@ class PledgeFlowsTest < ActionDispatch::IntegrationTest
 
     fill_in 'pledge[amount]', with: 100
     click_button 'Pledge Now'
-
     # Should be Redirected back to project page with thank you message
     assert_equal project_path(@project), current_path
     assert page.has_content?("Thanks for pledging")
@@ -39,6 +38,7 @@ class PledgeFlowsTest < ActionDispatch::IntegrationTest
     assert_equal @project, pledge.project
     assert_equal 100, pledge.amount
     assert_equal [@project.user.email], last_email.to
+
   end
   
 

@@ -12,6 +12,7 @@ class PledgesController < ApplicationController
 			user_id: current_user.id)
 
 		if @pledge.save
+			UserMailer.new_pledge(@pledge).deliver
 			redirect_to @project, notice: "Thanks for pledging"
 		else
 			render 'new'

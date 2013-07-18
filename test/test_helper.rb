@@ -23,13 +23,7 @@ class ActionDispatch::IntegrationTest
     reset_email
   end
 
-  def last_email
-    ActionMailer::Base.deliveries.last
-  end
- 
-  def reset_email
-    ActionMailer::Base.deliveries = []
-  end
+
 
 
   Capybara.app = Crowdfunder::Application
@@ -57,4 +51,13 @@ class ActionDispatch::IntegrationTest
     user
     # No asserts because testing is not done inside of a helper method
   end
+
+  def last_email
+    ActionMailer::Base.deliveries.last
+  end
+ 
+  def reset_email
+    ActionMailer::Base.deliveries = []
+  end
+  
 end
