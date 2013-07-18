@@ -16,6 +16,22 @@ class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
 
+
+  self.use_transactional_fixtures = false 
+
+  setup do
+    reset_email
+  end
+
+  def last_email
+    ActionMailer::Base.deliveries.last
+  end
+ 
+  def reset_email
+    ActionMailer::Base.deliveries = []
+  end
+
+
   Capybara.app = Crowdfunder::Application
   # To change the Capybara driver to webkit when wanted
   Capybara.javascript_driver = :webkit
