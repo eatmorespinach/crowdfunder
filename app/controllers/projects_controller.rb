@@ -1,7 +1,9 @@
 class ProjectsController < ApplicationController
 
 	def index
-		@projects = Project.all
+		@projects = Project.order('created_at DESC').page params[:page]
+		@allprojects = Project.all
+
 	end
 
 	def home

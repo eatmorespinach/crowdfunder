@@ -8,7 +8,7 @@ gem 'pg'
 gem 'sorcery'
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'kaminari-bootstrap'
+
 
 group :assets do
 	gem 'bootstrap-sass', '~> 2.2.2.0'
