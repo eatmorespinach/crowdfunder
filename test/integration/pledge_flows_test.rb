@@ -38,9 +38,10 @@ class PledgeFlowsTest < ActionDispatch::IntegrationTest
     assert_equal user, pledge.user
     assert_equal @project, pledge.project
     assert_equal 100, pledge.amount
-  end
-  
-  test "authenticated user can pledge valid amount" do 
     assert_equal [@project.user.email], last_email.to
   end
+  
+
+
+
 end
