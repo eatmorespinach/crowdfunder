@@ -11,7 +11,9 @@ Crowdfunder::Application.routes.draw do
   root to: 'projects#home' 
 
   namespace :my do
-    resources :projects
+    resources :projects do
+      resources :images, only: [:index, :create]
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -2,6 +2,6 @@
 <% @projects.each do |project| %>
 	<div class="project">
 		<%= project.title %> 
-		<%= link_to "Edit Project", edit_my_project_path([:my, project]) %>
+		<%= link_to "Edit Project", edit_my_project_path(project) %>
 	</div>
 <% end %>

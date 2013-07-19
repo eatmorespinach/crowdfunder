@@ -1,5 +1,8 @@
 class My::ProjectsController < ApplicationController
-	before_filter :correct_user, only: [:edit, :update]
+	before_filter :correct_user, only: [:edit, :update, :show, :destroy]
+	before_filter :require_login
+
+
 
 	def new
 		@project = Project.new
@@ -45,7 +48,8 @@ class My::ProjectsController < ApplicationController
 	end
 
 	def params_project
-		params.require(:project).permit(:title, :teaser, :goal, :description)
+		params.require(:project).permit(:title, :teaser, :goal, :description, :image)
 	end
+
 
 end

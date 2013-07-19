@@ -15,7 +15,7 @@ group :assets do
 end
 
 
-
+gem 'carrierwave'
 
 group :tools do
   gem 'guard-minitest' # automatically runs our tests whenever there have been changes made to them
