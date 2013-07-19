@@ -1,1 +1,3 @@
 A KickStarter based rails project by Eric Szeto and Drew Sing. 
+
+
