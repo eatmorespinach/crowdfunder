@@ -8,7 +8,7 @@ gem 'pg'
 gem 'sorcery'
 gem 'jquery-rails'
 gem 'kaminari'
-
+gem 'binding_of_caller'
 
 group :assets do
 	gem 'bootstrap-sass', '~> 2.2.2.0'
@@ -25,7 +25,9 @@ group :development do
   gem 'better_errors' # makes the errors we see in the browser more descriptive
   gem 'pry-rails'
   gem 'letter_opener'
+  gem 'meta_request'
 end
+
 
 group :test do 
   gem "factory_girl_rails" 

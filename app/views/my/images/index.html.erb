@@ -1,5 +1,5 @@
 <% @project.images.each do |image| %>
-	<%= image_tag image.file_url.to_s %>
+	<%= image_tag image.file_url.to_s, class: "image" %>
 <% end %>
 
 <%= form_for [:my, @project, @image], :html => {:multipart => true} do |f| %>

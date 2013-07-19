@@ -8,6 +8,7 @@ class PledgesController < ApplicationController
 	def create
 		@pledge = Pledge.new(
 			amount: params[:pledge][:amount],
+			#why isn't this just amount: params[:amount]
 			project_id: @project.id,
 			user_id: current_user.id)
 
